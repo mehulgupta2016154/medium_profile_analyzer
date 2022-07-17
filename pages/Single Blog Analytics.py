@@ -22,6 +22,7 @@ try:
         if blog:
             with st.spinner('loading stats ...'):
                 text_tokens,stats, original_text = get_blog_text(df[df['title']==blog]['url'].values[0])
+                st.text('1')
                 word_cloud(' '.join(text_tokens),'blog')
 
                 temp = {x:[a for a in y.values()][0] for x,y in df[df['title']==blog][['first Published At Bucket','publication','avg views per day','read_%','views','reads','claps','upvotes','reading Length (minutes)']].to_dict().items()}
@@ -30,6 +31,7 @@ try:
                 temp['stat'] = [x for x in stats.keys()]
                 temp['value'] = [str(x) for x in stats.values()]
                 fig = utils.create_table(temp,'blog statistics',False)
+                st.text('2')
                 fig.update_layout(height=300)
                 st.plotly_chart(fig,use_container_width=True)
                 keywords = config.kw_model.extract_keywords(' '.join(text_tokens))
@@ -47,7 +49,7 @@ try:
                     if count>4:
                         break
                     seen.append(keywords[index][0])
-                
+                st.text('keyword')
                 st.subheader('Compare blog')
                 blog2 = st.selectbox('select blog for comparison',[None]+[x for x in df['title'].values if x!=blog])
                 if blog2:
