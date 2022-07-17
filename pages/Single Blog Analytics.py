@@ -76,7 +76,8 @@ try:
                         cosine = 1 - spatial.distance.cosine(A,B)
 
                         speedometer(round(cosine,1))
-except:
+except Exception as e:
+    st.error(e)
     pass
 
         
