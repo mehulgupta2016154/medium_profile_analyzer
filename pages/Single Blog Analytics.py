@@ -1,6 +1,8 @@
 import sys
 sys.path.append("..")
 
+import nltk
+nltk.download('stopwords')
 import pandas as pd
 from constant import *
 from feature_engineering import *
