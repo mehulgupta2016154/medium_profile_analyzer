@@ -16,5 +16,5 @@ if file is not None:
     data_load(file)
     engineering(config.df,config.data)
 st_player("https://www.youtube.com/watch?v=WYxS1FTc4Kw")
-st.header("Don't have a profile? see the demo to know what this app offers")
+st.subheader("Don't have a profile? see the demo to know what this app offers")
 st_player("https://www.youtube.com/watch?v=UUlWmAbA2q0")
