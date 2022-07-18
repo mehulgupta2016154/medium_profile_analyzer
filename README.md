@@ -1,5 +1,5 @@
 # medium_profile_analyzer
-Streamlit based tool for annalyzing Medium profiles built using Streamlit & Python
+Streamlit based tool for analyzing Medium profiles built using Streamlit & Python
 
 App URL: https://mehulgupta2016154-medium-profile-analyzer-about-4kgv5r.streamlitapp.com/
 
